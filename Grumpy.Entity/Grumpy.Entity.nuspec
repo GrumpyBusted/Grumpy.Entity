@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>Grumpy.Entity</id>
+        <version>0</version>
+        <title>Grumpy.Entity</title>
+        <description>Helper classes for use of Entity Framework</description>
+        <summary>
+
+        </summary>
+        <tags>entity-framework connection-string database mssql</tags>
+        <authors>Anders Busted-Janum</authors>
+        <owners>GrumpyBusted</owners>
+        <projectUrl>https://github.com/GrumpyBusted/Grumpy.Entity</projectUrl>
+        <licenseUrl>https://github.com/GrumpyBusted/Grumpy.Entity/blob/master/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <language>en-US</language>
+        <copyright>Copyright © Busted-Janum 2018</copyright>
+    </metadata>
+    <files>
+        <file src="Grumpy.Entity.dll" target="lib\net451" />
+        <file src="Grumpy.Entity.pdb" target="lib\net451" />
+    </files>
+</package>
