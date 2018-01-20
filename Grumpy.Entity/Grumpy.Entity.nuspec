@@ -16,10 +16,17 @@
         <copyright>Copyright © Busted-Janum 2018</copyright>
         <dependencies>
             <dependency id="EntityFramework" version="6.2.0" />
+            <dependency id="Grumpy.Common" version="1.2.0" />
+            <dependency id="Grumpy.Json" version="1.2.0" />
         </dependencies>
     </metadata>
     <files>
         <file src="Grumpy.Entity.dll" target="lib\net451" />
         <file src="Grumpy.Entity.pdb" target="lib\net451" />
+        <file src="Grumpy.Entity.Context.tt" target="content" />
+        <file src="Grumpy.Entity.UpdateAppConfig.tt" target="content" />
+        <file src="Grumpy.Entity.UpdatePostBuildEvent.tt" target="content" />
+        <file src="PublishDacpac.ps1" target="content" />
+        <file src="Init.ps1" target="tools" />
     </files>
 </package>

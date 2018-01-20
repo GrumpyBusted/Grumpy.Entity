@@ -32,8 +32,13 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConnectionConfigTests.cs" />
+    <Compile Include="EntityConnectionConfigBuilderTests.cs" />
+    <Compile Include="EntityConnectionConfigTests.cs" />
+    <Compile Include="EntityNotFoundExceptionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -32,14 +32,24 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConnectionConfig.cs" />
+    <Compile Include="EntityConnectionConfig.cs" />
+    <Compile Include="EntityConnectionConfigBuilder.cs" />
+    <Compile Include="Exceptions\EntityNotFoundException.cs" />
+    <Compile Include="Interfaces\IDatabaseConnectionConfig.cs" />
+    <Compile Include="Interfaces\IEntityConnectionConfig.cs" />
+    <Compile Include="Exceptions\InvalidDatabaseConnectionException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Grumpy.Entity.nuspec">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Init.ps1" />
+    <None Include="PublishDacpac.ps1" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework">
@@ -48,6 +58,23 @@
     <PackageReference Include="Grumpy.Common">
       <Version>1.2.2</Version>
     </PackageReference>
+    <PackageReference Include="Grumpy.Json">
+      <Version>1.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Grumpy.Entity.Context.tt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Grumpy.Entity.UpdateAppConfig.tt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Grumpy.Entity.UpdatePostBuildEvent.tt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
