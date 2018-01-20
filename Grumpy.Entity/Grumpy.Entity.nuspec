@@ -5,9 +5,7 @@
         <version>0</version>
         <title>Grumpy.Entity</title>
         <description>Helper classes for use of Entity Framework</description>
-        <summary>
-
-        </summary>
+        <summary>This library include features for adding connection string to the constructor od the context class for entity framework plus a few other features.</summary>
         <tags>entity-framework connection-string database mssql</tags>
         <authors>Anders Busted-Janum</authors>
         <owners>GrumpyBusted</owners>
@@ -16,6 +14,9 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <language>en-US</language>
         <copyright>Copyright © Busted-Janum 2018</copyright>
+        <dependencies>
+            <dependency id="EntityFramework" version="6.2.0" />
+        </dependencies>
     </metadata>
     <files>
         <file src="Grumpy.Entity.dll" target="lib\net451" />
