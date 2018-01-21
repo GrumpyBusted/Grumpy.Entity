@@ -8,9 +8,7 @@ namespace Grumpy.Entity.Exceptions
     [Serializable]
     public sealed class EntityNotFoundException : Exception
     {
-        private EntityNotFoundException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
+        private EntityNotFoundException(SerializationInfo info, StreamingContext context) : base(info, context) { }
 
         public EntityNotFoundException(object obj) : base("Entity not Found")
         {
