@@ -16,8 +16,9 @@
         <copyright>Copyright © Busted-Janum 2018</copyright>
         <dependencies>
             <dependency id="EntityFramework" version="6.2.0" />
-            <dependency id="Grumpy.Common" version="1.2.3" />
+            <dependency id="Grumpy.Common" version="1.2.7" />
             <dependency id="Grumpy.Json" version="1.2.3" />
+            <dependency id="Grumpy.Logging" version="1.0.6" />
         </dependencies>
     </metadata>
     <files>
@@ -26,7 +27,7 @@
         <file src="Grumpy.Entity.Context.tt" target="content" />
         <file src="Grumpy.Entity.UpdateAppConfig.tt" target="content" />
         <file src="Grumpy.Entity.UpdatePostBuildEvent.tt" target="content" />
-        <file src="PublishDacpac.ps1" target="content" />
+        <file src="Grumpy.Entity.PublishDacpac.ps1" target="content" />
         <file src="Init.ps1" target="tools" />
     </files>
 </package>

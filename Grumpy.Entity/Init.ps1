@@ -34,42 +34,6 @@ function Add-ProjectItem($project, $file) {
     }
 }
 
-foreach ($file in Get-ChildItem -Path "$toolsPath\..\content" -Recurse -Include *.tt) {
+foreach ($file in Get-ChildItem -Path "$toolsPath\..\content" -Recurse -Include *.*) {
     Add-ProjectItem -project $project -file $file
-}
-
-$solution = Get-Interface $dte.Solution ([EnvDTE80.Solution2])
-$solutionFolder = Split-Path -Path $solution.FullName
-
-Copy-Item -Path "$toolsPath\..\content\PublishDacpac.ps1" -Destination $solutionFolder
-
-$projects = $solution.Projects
-
-$project = $null
-
-for ($i = 1; ($i -le $projects) -and ($project -ne $null).Count; $i++ ) {
-    $project = $projects.Item($i)
-
-    if ($project.Name -ne "Scripts") {
-        $project = $null
-    }
-}
-
-if ($project -eq $null) {
-    $project = $solution.AddSolutionFolder("Scripts")
-}
-
-if ($project -ne $null) {
-    $projectItem = $null
-
-    try {
-        $projectItem = $project.ProjectItems.Item($fileName)
-    }
-    catch {
-        $projectItem = $null
-    }
-
-    if ($projectItem -eq $null) {
-        $project.ProjectItems.AddFromFile($solutionFolder + "\PublishDacpac.ps1")
-    }
 }

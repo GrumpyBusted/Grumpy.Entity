@@ -7,8 +7,10 @@ using Grumpy.Entity.Interfaces;
 
 namespace Grumpy.Entity
 {
+    /// <inheritdoc />
     public class DatabaseConnectionConfig : IDatabaseConnectionConfig
     {
+        /// <inheritdoc />
         public string ConnectionString
         {
             get
@@ -28,24 +30,33 @@ namespace Grumpy.Entity
             set => Initialize(new SqlConnectionStringBuilder(value));
         }
 
+        /// <inheritdoc />
         public string DatabaseServerName { get; set; } = "";
+
+        /// <inheritdoc />
         public string DatabaseServerInstance { get; set; } = "";
+
+        /// <inheritdoc />
         public string DatabaseName { get; set; } = "";
 
+        /// <inheritdoc />
         public DatabaseConnectionConfig()
         {
         }
 
+        /// <inheritdoc />
         public DatabaseConnectionConfig(SqlConnectionStringBuilder sqlConnectionStringBuilder)
         {
             Initialize(sqlConnectionStringBuilder);
         }
 
+        /// <inheritdoc />
         public DatabaseConnectionConfig(string connectionString)
         {
             ConnectionString = connectionString;
         }
 
+        /// <inheritdoc />
         public DatabaseConnectionConfig(string dataSource, string databaseName)
         {
             SplitDataSource(dataSource);
@@ -53,6 +64,7 @@ namespace Grumpy.Entity
             DatabaseName = databaseName;
         }
 
+        /// <inheritdoc />
         public DatabaseConnectionConfig(string databaseServerName, string databaseServerInstance, string databaseName)
         {
             DatabaseServerName = databaseServerName;
