@@ -28,5 +28,6 @@
         <file src="Grumpy.Entity.UpdateAppConfig.tt" target="content" />
         <file src="Grumpy.Entity.UpdatePostBuildEvent.tt" target="content" />
         <file src="Grumpy.Entity.PublishDacpac.ps1" target="content" />
+        <file src="Init.ps1" target="tools" />
     </files>
 </package>
