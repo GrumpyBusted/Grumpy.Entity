@@ -86,21 +86,30 @@ function Calc-Hash([string]$DacpacFile) {
     return $Hash
 }
 
+function Drop-Database([string]$ServerName, [string]$DatabaseName) {
+    Invoke-Sqlcmd -ServerInstance "$ServerName" -Query "DROP DATABASE [$DatabaseName];"
+}
+
 $TargetName   = (Get-ChildItem $TargetPath).BaseName
 $TargetDir    = (Get-ChildItem $TargetPath).Directory
 $DatabaseName = $TargetName + "_Model"
 $ServerName   = "(localdb)\MSSQLLocalDB"
 $DacpacFile   = "$TargetDir\$TargetName.dacpac"
 $HashFile     = $DacpacFile + ".hash"
+$BuildAgent   = $false
 
 $NewHash = Calc-Hash -DacpacFile $DacpacFile
 
 if (Test-Path $HashFile -PathType Leaf) {
     $OldHash = Get-Content $HashFile
 
-    if ($NewHash -ne $OldHash) {
+    if ($NewHash -ne $OldHash -or $BuildAgent) {
         Remove-Item $HashFile -Force
     }
+}
+
+if ($BuildAgent) {
+    Drop-Database -ServerName $ServerName -DatabaseName $DatabaseName
 }
 
 if (-not(Test-Path $HashFile -PathType Leaf)) {
