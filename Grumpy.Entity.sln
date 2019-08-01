@@ -1,22 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grumpy.Entity", "Grumpy.Entity\Grumpy.Entity.csproj", "{03E84106-66A9-4C5B-BED8-1C45F6E3371A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D6312338-FBBC-49C3-995D-0E54DD89F5A1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9910D7A-2C0E-4257-B046-44AD5A081511}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1CAA2595-AF00-4CAD-BBC7-D0092E7812BD}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
-		..\Grumpy.Common\LICENSE = ..\Grumpy.Common\LICENSE
+		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grumpy.Entity.UnitTests", "Grumpy.Entity.UnitTests\Grumpy.Entity.UnitTests.csproj", "{D4C8BF18-DB11-4F6E-AC17-D62B8A05B0FB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3D89CE19-3869-412D-ADDF-352FAFCB070A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grumpy.Entity.UnitTests", "Grumpy.Entity.UnitTests\Grumpy.Entity.UnitTests.csproj", "{912A0473-9256-43B0-A37A-3A52336D00A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grumpy.Entity", "Grumpy.Entity\Grumpy.Entity.csproj", "{44D2E32F-4ABB-459E-AC77-65B793953CE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,22 +24,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{03E84106-66A9-4C5B-BED8-1C45F6E3371A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03E84106-66A9-4C5B-BED8-1C45F6E3371A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03E84106-66A9-4C5B-BED8-1C45F6E3371A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03E84106-66A9-4C5B-BED8-1C45F6E3371A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4C8BF18-DB11-4F6E-AC17-D62B8A05B0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4C8BF18-DB11-4F6E-AC17-D62B8A05B0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4C8BF18-DB11-4F6E-AC17-D62B8A05B0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4C8BF18-DB11-4F6E-AC17-D62B8A05B0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912A0473-9256-43B0-A37A-3A52336D00A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912A0473-9256-43B0-A37A-3A52336D00A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912A0473-9256-43B0-A37A-3A52336D00A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912A0473-9256-43B0-A37A-3A52336D00A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D2E32F-4ABB-459E-AC77-65B793953CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D2E32F-4ABB-459E-AC77-65B793953CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D2E32F-4ABB-459E-AC77-65B793953CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D2E32F-4ABB-459E-AC77-65B793953CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D4C8BF18-DB11-4F6E-AC17-D62B8A05B0FB} = {D6312338-FBBC-49C3-995D-0E54DD89F5A1}
+		{912A0473-9256-43B0-A37A-3A52336D00A3} = {3D89CE19-3869-412D-ADDF-352FAFCB070A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {82AB45BD-6E1C-4F53-98A5-F189D39E3FE6}
+		SolutionGuid = {BB9D4118-54AD-4AD4-96E3-39868316BAF7}
 	EndGlobalSection
 EndGlobal
